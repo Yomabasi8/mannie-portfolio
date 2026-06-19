@@ -1,16 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/#services" },
+  { label: "Work Samples", href: "/#work" },
+  { label: "Contact", href: "/#contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="w-full bg-[#F1F7FE]/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             src="/images/Logoo.png"
             alt="Wave Productions Logo"
@@ -19,46 +30,29 @@ export default function Navbar() {
             className="object-contain"
             priority
           />
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <nav className="hidden md:flex items-center gap-10 font-jetbrains text-sm font-medium">
-          <a
-            href="#"
-            className="text-brand-button hover:text-brand-secondary transition-colors duration-200"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="text-brand-black-light hover:text-brand-secondary transition-colors duration-200"
-          >
-            About
-          </a>
-          <a
-            href="#services"
-            className="text-brand-black-light hover:text-brand-secondary transition-colors duration-200"
-          >
-            Services
-          </a>
-          <a
-            href="#work"
-            className="text-brand-black-light hover:text-brand-secondary transition-colors duration-200"
-          >
-            Work Samples
-          </a>
-          <a
-            href="#contact"
-            className="text-brand-black-light hover:text-brand-secondary transition-colors duration-200"
-          >
-            Contact
-          </a>
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`transition-colors duration-200 ${
+                pathname === link.href
+                  ? "text-brand-button"
+                  : "text-brand-black-light hover:text-brand-secondary"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:block">
           <a
-            href="#contact"
+            href="/#contact"
             className="bg-brand-button text-white font-jetbrains text-sm font-bold px-6 py-3 rounded-lg border-2 border-brand-black-dark shadow-[3px_3px_0px_0px_#060606] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#060606] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[0px_0px_0px_0px_#060606] transition-all duration-150 inline-block text-center"
           >
             Start Project
@@ -103,43 +97,22 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-brand-secondary/10 px-4 pt-2 pb-6 space-y-4 shadow-lg animate-fadeIn">
           <div className="flex flex-col gap-4 font-jetbrains text-sm font-medium">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`py-2 border-b border-brand-secondary/5 ${
+                  pathname === link.href
+                    ? "text-brand-button"
+                    : "text-brand-black-light hover:text-brand-secondary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
             <a
-              href="#"
-              onClick={() => setIsOpen(false)}
-              className="text-brand-button py-2 border-b border-brand-secondary/5"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              onClick={() => setIsOpen(false)}
-              className="text-brand-black-light py-2 border-b border-brand-secondary/5 hover:text-brand-secondary"
-            >
-              About
-            </a>
-            <a
-              href="#services"
-              onClick={() => setIsOpen(false)}
-              className="text-brand-black-light py-2 border-b border-brand-secondary/5 hover:text-brand-secondary"
-            >
-              Services
-            </a>
-            <a
-              href="#work"
-              onClick={() => setIsOpen(false)}
-              className="text-brand-black-light py-2 border-b border-brand-secondary/5 hover:text-brand-secondary"
-            >
-              Work Samples
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="text-brand-black-light py-2 border-b border-brand-secondary/5 hover:text-brand-secondary"
-            >
-              Contact
-            </a>
-            <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="bg-brand-button text-white font-jetbrains text-center text-sm font-bold py-3 rounded-lg border-2 border-brand-black-dark shadow-[3px_3px_0px_0px_#060606] block"
             >

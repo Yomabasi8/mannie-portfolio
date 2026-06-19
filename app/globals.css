@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200..800&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200..800&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&family=Playball&family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -15,6 +15,7 @@
   --font-bricolage: 'Bricolage Grotesque', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-jetbrains: 'JetBrains Mono', monospace;
+  --font-playball: 'Playball', cursive;
 
   /* Custom Animations */
   --animate-music-wave: music-wave 1.2s ease-in-out infinite;
@@ -24,6 +25,9 @@
   --animate-wave-bar: wave-bar 0.8s ease-in-out infinite;
   --animate-image-float: image-float 2.6s ease-in-out infinite;
   --animate-scroll-x-triple: scroll-x-triple 21s linear infinite;
+  --animate-wave-scroll: scroll-x 16s linear infinite;
+  --animate-wave-scroll-slow: scroll-x 22s linear infinite;
+  --animate-tilt-swing: tilt-swing 1.4s ease-in-out infinite;
 }
 
 body {
@@ -67,4 +71,13 @@ body {
 @keyframes scroll-x-triple {
   0% { transform: translateX(0); }
   100% { transform: translateX(-33.3333%); }
+}
+
+@keyframes tilt-swing {
+  0%, 100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
 }
