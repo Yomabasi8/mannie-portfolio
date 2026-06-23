@@ -71,7 +71,7 @@ export default function Hero() {
             </div>
             <div className="w-[24vw] max-w-[220px] self-end">
               <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden animate-image-float" style={{ animationDelay: '0.3s' }}>
-                <Image src="/images/Center image (1).png" alt="Creative portrait" fill sizes="24vw" className="object-cover" priority />
+                <Image src="/images/Center image1.png" alt="Creative portrait" fill sizes="24vw" className="object-cover" priority />
               </div>
             </div>
             <div className="w-[22vw] max-w-[200px] flex flex-col gap-2 sm:gap-4 md:gap-5 justify-end self-end">

@@ -8,7 +8,7 @@ const stickers: Sticker[] = [
     variants: ["left-[24%] top-[16%] -rotate-6", "left-[21%] top-[20%] rotate-3", "left-[27%] top-[12%] -rotate-2"],
   },
   {
-    text: "Podcast Engineer",
+    text: "Podcast Producer",
     bg: "bg-[#CFEEE0]",
     variants: ["left-[76%] top-[24%] rotate-6", "left-[73%] top-[28%] -rotate-4", "left-[79%] top-[20%] rotate-3"],
   },
