@@ -83,21 +83,21 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="group relative overflow-hidden rounded-2xl bg-white p-6"
+              className="group relative overflow-hidden rounded-2xl bg-white p-4 sm:p-6 max-w-[260px] mx-auto sm:max-w-none sm:mx-0"
             >
-              <span className="absolute left-0 top-6 bottom-6 w-1 rounded-full bg-brand-button origin-center scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+              <span className="absolute left-0 top-4 bottom-4 sm:top-6 sm:bottom-6 w-1 rounded-full bg-brand-button origin-center scale-y-100 sm:scale-y-0 transition-transform duration-300 ease-out sm:group-hover:scale-y-100" />
 
-              <div className="flex items-center gap-3 mb-4">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0">
+              <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0">
                   <Image src={testimonial.avatar} alt={testimonial.name} fill sizes="56px" className="object-cover" />
                 </div>
                 <div>
-                  <p className="font-bricolage font-bold text-brand-black-dark">{testimonial.name}</p>
-                  <p className="font-poppins text-sm text-brand-black-light/70">{testimonial.location}</p>
+                  <p className="font-bricolage font-bold text-sm sm:text-base text-brand-black-dark">{testimonial.name}</p>
+                  <p className="font-poppins text-xs sm:text-sm text-brand-black-light/70">{testimonial.location}</p>
                 </div>
               </div>
 
-              <p className="font-poppins text-sm text-brand-black-light leading-relaxed mb-4">
+              <p className="font-poppins text-xs sm:text-sm text-brand-black-light leading-relaxed mb-3 sm:mb-4">
                 {testimonial.quote}
               </p>
 

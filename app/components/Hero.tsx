@@ -23,12 +23,12 @@ export default function Hero() {
 
         {/* Heading Section with offset background ellipse */}
         <div className="relative max-w-4xl mb-6">
-          <div className="absolute -top-3 left-2 sm:-top-4 sm:left-3 w-16 h-16 sm:w-24 sm:h-24 -z-10">
+          <div className="absolute -top-4 left-0 sm:-top-4 sm:left-3 w-14 h-14 sm:w-24 sm:h-24 -z-10">
             <Image
               src="/images/Ellipse 1.png"
               alt=""
               fill
-              sizes="(max-width: 640px) 64px, 96px"
+              sizes="(max-width: 640px) 56px, 96px"
               className="object-contain"
             />
           </div>
@@ -55,13 +55,13 @@ export default function Hero() {
 
         {/* Staggered 5-Column Image Grid */}
         <div className="w-screen overflow-hidden -mx-4 sm:-mx-6 lg:-mx-8">
-          <div className="flex justify-center gap-4 md:gap-5 pt-3" style={{ flexWrap: 'nowrap' }}>
+          <div className="flex justify-center gap-2 sm:gap-4 md:gap-5 pt-3" style={{ flexWrap: 'nowrap' }}>
             <div className="w-[22vw] max-w-[200px] self-center">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden animate-image-float" style={{ animationDelay: '0s' }}>
                 <Image src="/images/hero image.png" alt="Listener enjoying podcast" fill sizes="22vw" className="object-cover" />
               </div>
             </div>
-            <div className="w-[22vw] max-w-[200px] flex flex-col gap-4 md:gap-5 justify-end self-end">
+            <div className="w-[22vw] max-w-[200px] flex flex-col gap-2 sm:gap-4 md:gap-5 justify-end self-end">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shrink-0 animate-image-float" style={{ animationDelay: '0.15s' }}>
                 <Image src="/images/Frame 17.png" alt="Microphone setup" fill sizes="22vw" className="object-cover" />
               </div>
@@ -74,7 +74,7 @@ export default function Hero() {
                 <Image src="/images/Center image (1).png" alt="Creative portrait" fill sizes="24vw" className="object-cover" priority />
               </div>
             </div>
-            <div className="w-[22vw] max-w-[200px] flex flex-col gap-4 md:gap-5 justify-end self-end">
+            <div className="w-[22vw] max-w-[200px] flex flex-col gap-2 sm:gap-4 md:gap-5 justify-end self-end">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shrink-0 animate-image-float" style={{ animationDelay: '0.45s' }}>
                 <Image src="/images/hero image (2).png" alt="Two people podcasting" fill sizes="22vw" className="object-cover" />
               </div>
