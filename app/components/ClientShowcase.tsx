@@ -24,8 +24,8 @@ const clients = [
     name: "Ain't That Good Podcast",
     description:
       "The Ain't That Good podcast is an honest and gritty podcast that reframes this life through the lens of Christ and his teachings. Tonya, Brandy, Kiesha, and Chelsey are all sinners, saved by grace through Jesus, being transformed by God's goodness and love.",
-    embedUrl: "https://open.spotify.com/embed/episode/28c2mKmjfrQBlx03wT5rtM",
-    platform: "spotify" as const,
+    embedUrl: "https://embed.podcasts.apple.com/us/podcast/the-power-of-permission/id1687909931?i=1000773699182",
+    platform: "apple" as const,
   },
   {
     name: "The Unserious Podcast",
