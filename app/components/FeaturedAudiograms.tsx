@@ -90,7 +90,7 @@ function PhoneFrame({
           type="button"
           onClick={onToggle}
           aria-label={isPlaying ? "Pause video" : "Play video"}
-          className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors"
+          className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors cursor-pointer"
         >
           <span className="w-10 h-10 rounded-full bg-black/60 flex items-center justify-center">
             {isPlaying ? <PauseIcon /> : <PlayIcon />}

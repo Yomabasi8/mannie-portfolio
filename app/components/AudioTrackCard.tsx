@@ -57,7 +57,7 @@ export function TrackCard({
         type="button"
         onClick={onToggle}
         aria-label={`${isPlaying ? "Pause" : "Play"} ${track.title}`}
-        className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-br ${track.gradient}`}
+        className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-br cursor-pointer ${track.gradient}`}
       >
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
