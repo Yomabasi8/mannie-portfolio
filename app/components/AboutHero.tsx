@@ -5,28 +5,48 @@ import SlideUp from "./SlideUp";
 const stickers: Sticker[] = [
   {
     text: "Podcaster",
-    bg: "bg-[#CFEEE0]",
-    variants: ["left-[14%] top-[20%] -rotate-3 z-20", "left-[15%] top-[23%] -rotate-5 z-20", "left-[13%] top-[17%] -rotate-2 z-20"],
-  },
-  {
-    text: "Audio Editor",
-    bg: "bg-[#FBF6E9]",
-    variants: ["left-[32%] top-[20%] rotate-3 z-20", "left-[33%] top-[23%] rotate-5 z-20", "left-[31%] top-[17%] rotate-2 z-20"],
-  },
-  {
-    text: "Podcaster Manager",
     bg: "bg-[#FBD7CF]",
-    variants: ["left-[7%] top-[62%] -rotate-4 z-20", "left-[8%] top-[65%] -rotate-6 z-20", "left-[6%] top-[59%] -rotate-3 z-20"],
-  },
-  {
-    text: "Podcast Producer",
-    bg: "bg-[#CFEEE0]",
-    variants: ["left-[36%] top-[62%] rotate-3 z-20", "left-[37%] top-[65%] rotate-5 z-20", "left-[35%] top-[59%] rotate-2 z-20"],
+    variants: [
+      "left-[58%] sm:left-[14%] top-[27%] sm:top-[20%] -rotate-3 z-20",
+      "left-[58%] sm:left-[15%] top-[27%] sm:top-[23%] -rotate-5 z-20",
+      "left-[58%] sm:left-[13%] top-[27%] sm:top-[17%] -rotate-2 z-20",
+    ],
   },
   {
     text: "Podcast Assistant",
     bg: "bg-[#FBD7CF]",
-    variants: ["left-[18%] top-[75%] -rotate-3 z-20", "left-[19%] top-[78%] -rotate-5 z-20", "left-[17%] top-[72%] -rotate-2 z-20"],
+    variants: [
+      "left-[10%] sm:left-[18%] top-[38%] sm:top-[75%] -rotate-3 z-20",
+      "left-[10%] sm:left-[19%] top-[38%] sm:top-[78%] -rotate-5 z-20",
+      "left-[10%] sm:left-[17%] top-[38%] sm:top-[72%] -rotate-2 z-20",
+    ],
+  },
+  {
+    text: "Audio Editor",
+    bg: "bg-[#CFEEE0]",
+    variants: [
+      "left-[7%] sm:left-[32%] top-[52%] sm:top-[20%] rotate-3 z-20",
+      "left-[7%] sm:left-[33%] top-[52%] sm:top-[23%] rotate-5 z-20",
+      "left-[7%] sm:left-[31%] top-[52%] sm:top-[17%] rotate-2 z-20",
+    ],
+  },
+  {
+    text: "Podcast Producer",
+    bg: "bg-[#CFEEE0]",
+    variants: [
+      "left-[7%] sm:left-[36%] top-[67%] sm:top-[62%] rotate-3 z-20",
+      "left-[7%] sm:left-[37%] top-[67%] sm:top-[65%] rotate-5 z-20",
+      "left-[7%] sm:left-[35%] top-[67%] sm:top-[59%] rotate-2 z-20",
+    ],
+  },
+  {
+    text: "Podcaster Manager",
+    bg: "bg-[#FBD7CF]",
+    variants: [
+      "left-[7%] sm:left-[7%] top-[110%] sm:top-[62%] -rotate-4 z-20",
+      "left-[7%] sm:left-[8%] top-[110%] sm:top-[65%] -rotate-6 z-20",
+      "left-[7%] sm:left-[6%] top-[110%] sm:top-[59%] -rotate-3 z-20",
+    ],
   },
 ];
 
@@ -93,35 +113,25 @@ function WobblyBorder() {
 export default function AboutHero() {
   return (
     <section className="pt-4 pb-8">
-      <div className="relative w-full bg-brand-button overflow-hidden min-h-[520px] sm:min-h-[620px] lg:min-h-[700px] flex items-center">
+      <div className="relative w-full bg-brand-button overflow-hidden min-h-[500px] sm:min-h-[620px] lg:min-h-[700px] flex items-start sm:items-center">
         <WobblyBorder />
 
         <StickerField stickers={stickers} />
 
         {/* Text column */}
-        <div className="relative z-10 pl-10 sm:pl-16 lg:pl-24 pr-6 sm:pr-10 lg:pr-14 lg:max-w-[64%]">
-          <h1 className="relative font-bricolage text-[clamp(2.5rem,4.6vw,4.75rem)] font-extrabold text-white leading-[1.2] whitespace-normal sm:whitespace-nowrap">
+        <div className="relative z-10 pt-10 sm:pt-0 pl-6 sm:pl-16 lg:pl-24 pr-6 sm:pr-10 lg:pr-14 lg:max-w-[64%]">
+          <h1 className="relative font-bricolage text-[clamp(2rem,4.6vw,4.75rem)] font-extrabold text-white leading-[1.2] whitespace-normal sm:whitespace-nowrap">
             The Podcaster{" "}
             <span className="font-playball text-[clamp(3rem,5.8vw,6rem)] leading-none align-middle">
               behind
             </span>
             <br />
-            Wave{" "}
-            <span className="relative inline-block">
-              <Image
-                src="/images/black circle.png"
-                alt=""
-                width={224}
-                height={224}
-                className="absolute -z-10 w-16 sm:w-20 lg:w-24 h-16 sm:h-20 lg:h-24 -right-2.5 sm:-right-3 lg:-right-4 top-1/2 -translate-y-1/2 pointer-events-none"
-              />
-              Productions
-            </span>
+            Wave Productions
           </h1>
         </div>
 
         {/* Portrait */}
-        <div className="absolute z-0 right-0 sm:right-6 lg:right-10 bottom-0 w-[62%] sm:w-[48%] lg:w-[42%] max-w-[560px] aspect-[1842/2100]">
+        <div className="absolute z-0 right-0 sm:right-6 lg:right-10 bottom-0 w-[78%] sm:w-[52%] lg:w-[46%] max-w-[560px] aspect-[1842/2100]">
           <SlideUp className="relative w-full h-full">
             <Image
               src="/images/Manny.png"

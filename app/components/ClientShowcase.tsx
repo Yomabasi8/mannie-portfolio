@@ -31,8 +31,8 @@ const clients = [
     name: "The Unserious Podcast",
     description:
       "This is a light-hearted show where Mannie shares allegedly funny stories and talks about random topics in the most exaggerated and unserious way possible!",
-    embedUrl: "https://embed.podcasts.apple.com/us/podcast/s2-e6-if-i-ruled-nigeria-for-a-day-with-martha/id1762500455",
-    platform: "apple" as const,
+    embedUrl: "https://open.spotify.com/embed/episode/7x5Vf2qdy7wSBRApaMPJbu",
+    platform: "spotify" as const,
   },
   {
     name: "Grieve with Christ After Loss",
@@ -52,8 +52,8 @@ const clients = [
     name: "The Blank Page Podcast",
     description:
       "Welcome to The Blank Page, where we celebrate the books that shaped us and the ones we're just discovering. Each episode, we explore the craft behind great writing, powerful characters, plot twists and stories that stay with us long after we've turned the final page. This podcast is co-hosted by two long time friends, Gary Chris who is a lawyer and content writer and Fortune who is a writer, author and UI/UX designer.",
-    embedUrl: "https://embed.podcasts.apple.com/by/podcast/page-4-literature-in-english-i/id1833498337",
-    platform: "apple" as const,
+    embedUrl: "https://open.spotify.com/embed/episode/4sfoABdWtdeM0YyRffAriA",
+    platform: "spotify" as const,
   },
 ];
 

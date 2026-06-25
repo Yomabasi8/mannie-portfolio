@@ -47,7 +47,7 @@ export default function StickerField({ stickers = defaultStickers }: { stickers?
         return (
           <span
             key={sticker.text}
-            className={`absolute font-jetbrains text-xs sm:text-sm font-bold text-brand-black-dark px-4 py-2 rounded-full shadow-[2px_2px_0px_0px_#060606] whitespace-nowrap transition-all duration-1000 ease-in-out ${sticker.bg} ${variant}`}
+            className={`absolute font-jetbrains text-[10px] sm:text-xs font-bold text-brand-black-dark px-2.5 py-1 sm:px-4 sm:py-2 rounded-full shadow-[2px_2px_0px_0px_#060606] whitespace-nowrap transition-all duration-1000 ease-in-out ${sticker.bg} ${variant}`}
           >
             {sticker.text}
           </span>
