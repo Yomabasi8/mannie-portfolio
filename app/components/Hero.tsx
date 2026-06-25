@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#F1F7FE] overflow-hidden pt-8 pb-16 sm:pb-24">
+    <section className="relative w-full bg-[#F1F7FE] overflow-hidden pt-8 pb-16 sm:pb-20">
       {/* Wave Decorative Background elements */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
         {/* Subtle grid pattern or shapes if needed */}
@@ -45,7 +45,7 @@ export default function Hero() {
         </p>
 
         {/* CTA Button */}
-        <div className="mb-16 sm:mb-20">
+        <div className="mb-0">
           <a
             href="https://calendly.com/emmanuelokonkojr/30min"
             target="_blank"
@@ -56,42 +56,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Staggered 5-Column Image Grid */}
-        <div className="w-screen overflow-hidden -mx-4 sm:-mx-6 lg:-mx-8">
-          <div className="flex justify-center gap-2 sm:gap-4 md:gap-5 pt-3" style={{ flexWrap: 'nowrap' }}>
-            <div className="w-[22vw] max-w-[200px] self-center">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden animate-image-float" style={{ animationDelay: '0s' }}>
-                <Image src="/images/hero image.png" alt="Listener enjoying podcast" fill sizes="22vw" className="object-cover" />
-              </div>
-            </div>
-            <div className="w-[22vw] max-w-[200px] flex flex-col gap-2 sm:gap-4 md:gap-5 justify-end self-end">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shrink-0 animate-image-float" style={{ animationDelay: '0.15s' }}>
-                <Image src="/images/Frame 17.png" alt="Microphone setup" fill sizes="22vw" className="object-cover" />
-              </div>
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shrink-0 animate-image-float" style={{ animationDelay: '0.15s' }}>
-                <Image src="/images/talking.png" alt="Recording an interview" fill sizes="22vw" className="object-cover" />
-              </div>
-            </div>
-            <div className="w-[24vw] max-w-[220px] self-end">
-              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden animate-image-float" style={{ animationDelay: '0.3s' }}>
-                <Image src="/images/Center image1.png" alt="Creative portrait" fill sizes="24vw" className="object-cover" priority />
-              </div>
-            </div>
-            <div className="w-[22vw] max-w-[200px] flex flex-col gap-2 sm:gap-4 md:gap-5 justify-end self-end">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shrink-0 animate-image-float" style={{ animationDelay: '0.45s' }}>
-                <Image src="/images/hero image (2).png" alt="Two people podcasting" fill sizes="22vw" className="object-cover" />
-              </div>
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shrink-0 animate-image-float" style={{ animationDelay: '0.45s' }}>
-                <Image src="/images/heroo.png" alt="Studio headphones" fill sizes="22vw" className="object-cover" />
-              </div>
-            </div>
-            <div className="w-[22vw] max-w-[200px] self-center">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden animate-image-float" style={{ animationDelay: '0.6s' }}>
-                <Image src="/images/hero image (3).png" alt="Woman smiling with headphones" fill sizes="22vw" className="object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
