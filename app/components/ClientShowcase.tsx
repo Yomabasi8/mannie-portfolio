@@ -3,7 +3,7 @@ const clients = [
     name: "The Unity Rock Podcast",
     description:
       "This is the podcast where visionaries and integrators come together to share real stories, practical strategies, and hard-earned insights. Hosted by Clayton Stenson, The Unity Guide, the show dives into meaningful conversations with builders and innovators in the EOS community. Each episode explores how vision turns into action, how people bring ideas to life, and what it truly takes to create lasting impact in business and leadership. If you're interested in authentic conversations with people who are making things happen, follow, subscribe, and join us as we get into the conversation.",
-    embedUrl: "https://open.spotify.com/embed/episode/0paPREkRCyNzmje7w8vN6",
+    embedUrl: "https://open.spotify.com/embed/episode/0paPREkRCyNzmje7w8vN6o",
     platform: "spotify" as const,
   },
   {
