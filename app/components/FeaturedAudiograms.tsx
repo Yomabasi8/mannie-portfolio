@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const phoneOffsets = ["mt-0", "mt-10 sm:mt-14", "mt-20 sm:mt-28", "mt-32 sm:mt-44"];
+const phoneOffsets = ["sm:mt-0", "sm:mt-14", "sm:mt-28", "sm:mt-44"];
 
 const videos = [
   { src: "/videos/Instagram Wave Productions Teaser.mp4", objectFit: "cover", objectPosition: "center" },
@@ -75,6 +75,7 @@ function PhoneFrame({
             loop
             playsInline
             muted
+            preload="auto"
             className="absolute inset-0 w-full h-full object-cover scale-110 blur-lg"
           />
         )}
@@ -83,6 +84,7 @@ function PhoneFrame({
           src={videoSrc}
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full"
           style={{ objectFit: objectFit as "cover" | "contain", objectPosition }}
         />
@@ -156,11 +158,11 @@ export default function FeaturedAudiograms() {
           <span className="text-brand-button">high-impact</span> visual storytelling.
         </p>
 
-        <div ref={rowRef} className="flex items-start gap-6 sm:gap-8 mt-16 sm:mt-20">
+        <div ref={rowRef} className="flex flex-col items-center sm:flex-row sm:items-start gap-10 sm:gap-8 mt-16 sm:mt-20">
           {phoneOffsets.map((offset, i) => (
             <div
               key={i}
-              className={`w-[19vw] max-w-[220px] ${offset} transition-[opacity,transform] duration-1100 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              className={`w-[65vw] max-w-[300px] sm:w-[19vw] sm:max-w-[220px] ${offset} transition-[opacity,transform] duration-1100 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
               }`}
               style={{ transitionDelay: revealed ? `${i * 220}ms` : "0ms" }}
