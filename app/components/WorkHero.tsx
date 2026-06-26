@@ -3,31 +3,47 @@ import StickerField, { type Sticker } from "./StickerField";
 
 const stickers: Sticker[] = [
   {
-    text: "Audiograms",
-    bg: "bg-[#FBF6E9]",
-    variants: ["left-[24%] top-[16%] -rotate-6", "left-[21%] top-[20%] rotate-3", "left-[27%] top-[12%] -rotate-2"],
+    text: "Cover Art Design",
+    bg: "bg-[#CFEEE0]",
+    variants: [
+      "left-[4%] top-[8%] -rotate-6",
+      "left-[5%] top-[9%] -rotate-4",
+      "left-[4%] top-[7%] -rotate-8",
+    ],
   },
   {
     text: "Podcast Producer",
     bg: "bg-[#CFEEE0]",
-    variants: ["left-[76%] top-[24%] rotate-6", "left-[73%] top-[28%] -rotate-4", "left-[79%] top-[20%] rotate-3"],
+    variants: [
+      "left-[57%] top-[8%] rotate-6",
+      "left-[56%] top-[9%] rotate-4",
+      "left-[57%] top-[7%] rotate-8",
+    ],
   },
   {
-    text: "Cover Art Design",
-    bg: "bg-[#CFEEE0]",
-    variants: ["left-[12%] top-[46%] -rotate-3", "left-[15%] top-[50%] rotate-5", "left-[9%] top-[42%] -rotate-7"],
+    text: "Audiograms",
+    bg: "bg-[#FBF6E9]",
+    variants: [
+      "left-[6%] top-[74%] -rotate-3",
+      "left-[7%] top-[73%] -rotate-5",
+      "left-[6%] top-[75%] -rotate-2",
+    ],
   },
   {
     text: "Podcasts",
     bg: "bg-[#FBD7CF]",
-    variants: ["left-[77%] top-[75%] rotate-4", "left-[74%] top-[79%] -rotate-5", "left-[80%] top-[71%] rotate-8"],
+    variants: [
+      "left-[62%] top-[74%] rotate-4",
+      "left-[63%] top-[73%] rotate-2",
+      "left-[62%] top-[75%] rotate-6",
+    ],
   },
 ];
 
 export default function WorkHero() {
   return (
     <section className="relative bg-brand-button overflow-hidden py-20 sm:py-28 min-h-[440px] sm:min-h-[500px] flex items-center">
-      <StickerField stickers={stickers} />
+      <StickerField stickers={stickers} pillClassName="text-xs px-4 py-2" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="origin-center inline-block animate-music-wave">

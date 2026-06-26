@@ -32,22 +32,35 @@ const defaultStickers: Sticker[] = [
   },
 ];
 
-export default function StickerField({ stickers = defaultStickers }: { stickers?: Sticker[] }) {
+export default function StickerField({
+  stickers = defaultStickers,
+  isStatic = false,
+  pillClassName,
+}: {
+  stickers?: Sticker[];
+  isStatic?: boolean;
+  pillClassName?: string;
+}) {
   const [tick, setTick] = useState(0);
 
   useEffect(() => {
+    if (isStatic) return;
     const id = setInterval(() => setTick((t) => t + 1), 2000);
     return () => clearInterval(id);
-  }, []);
+  }, [isStatic]);
 
   return (
     <>
       {stickers.map((sticker, i) => {
-        const variant = sticker.variants[(tick + i) % sticker.variants.length];
+        const variant = isStatic
+          ? sticker.variants[0]
+          : sticker.variants[(tick + i) % sticker.variants.length];
         return (
           <span
             key={sticker.text}
-            className={`absolute font-jetbrains text-[10px] sm:text-xs font-bold text-brand-black-dark px-2.5 py-1 sm:px-4 sm:py-2 rounded-full shadow-[2px_2px_0px_0px_#060606] whitespace-nowrap transition-all duration-1000 ease-in-out ${sticker.bg} ${variant}`}
+            className={`absolute font-jetbrains font-bold text-brand-black-dark rounded-full shadow-[2px_2px_0px_0px_#060606] whitespace-nowrap ${
+              pillClassName ?? "text-[10px] sm:text-xs px-2.5 py-1 sm:px-4 sm:py-2 transition-all duration-1000 ease-in-out"
+            } ${sticker.bg} ${variant}`}
           >
             {sticker.text}
           </span>
